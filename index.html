@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="assets/img/undraw_apartment_rent_o-0-ut.svg" alt="">
+            <img src="https://lh3.googleusercontent.com/drive-storage/AKHj6E62rCj2piVi2-AB42mDrbUL0KG6-FCjNnxWuPU0RhXU1tfYsPCGDs2yR6C-EUGFuwmyHYhudrx3AMui_Pt0IXLZ8IYJdTzQIz5KZ8Ys7A=w1905-h917" alt="">
         </div>
         <div class="form">
             <form action="#">
@@ -42,22 +42,22 @@
 
                     <div class="input-box">
                         <label for="number">Celular</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                        <input id="number" type="num" name="number" placeholder="(xx) xxxx-xxxx" required>
                     </div>
 
                     <div class="input-box">
                         <label for="cpf">CPF</label>
-                        <input id="cpf" type="cpf" name="cpf" placeholder="Digite seu CPF" required>
+                        <input id="cpf" type="num" name="cpf" placeholder="Digite seu CPF" required>
                     </div>
 
                     <div class="input-box">
                         <label for="rg">RG</label>
-                        <input id="rg" type="num" name="confirmPassword" placeholder="Digite seu RG" required>
+                        <input id="rg" type="num" name="rg" placeholder="Digite seu RG" required>
                     </div>
 
                     <div class="input-box">
                         <label for="vehicle">Veículo</label>
-                        <input id="vehicle" type="text" name="password" placeholder="Descreva Seu veículo (cor, etc)" required>
+                        <input id="vehicle" type="text" name="vehicle" placeholder="Descreva Seu veículo (cor, etc)" required>
                     </div>
 
                     <div class="input-box">
@@ -74,18 +74,18 @@
 
                     <div class="gender-group">
                         <div class="gender-input">
-                            <input id="female" type="radio" name="gender" required>
-                            <label for="female">Proprietário</label>
+                            <input id="prop" type="radio" name="unity" required>
+                            <label for="prop">Proprietário</label>
                         </div>
 
                         <div class="gender-input">
-                            <input id="male" type="radio" name="gender" required>
-                            <label for="male">Inquilino</label>
+                            <input id="inq" type="radio" name="unity" required>
+                            <label for="inq">Inquilino</label>
                         </div>
 
                         <div class="gender-input">
-                            <input id="none" type="radio" name="gender" required>
-                            <label for="none">Grupo de emergência</label>
+                            <input id="emergency" type="radio" name="unity" required>
+                            <label for="emergency">Grupo de emergência</label>
                         </div>
                     </div>
                 </div>
@@ -99,14 +99,15 @@
 
      <script>
     function enviarFormulario() {
-      var primeironome = document.getElementById('firstname').value;
+      var firstname = document.getElementById('firstname').value;
+      var lastname = document.getElementById('lastname').value;
       var email = document.getElementById('email').value;
-      var unidade = document.getElementById('female').value;
-      var celular = document.getElementById('number').value;
+      var prop = document.getElementById('prop').value;
+      var number = document.getElementById('number').value;
       var rg = document.getElementById('rg').value;
       var cpf = document.getElementById('cpf').value;
-      var veiculo = document.getElementById('vehicle').value;
-      var animaldeestimação = document.getElementById('pet').value;
+      var vehicle = document.getElementById('vehicle').value;
+      var pet = document.getElementById('pet').value;
 
       // Criar um objeto JSON
       var dados = {
@@ -118,7 +119,7 @@
         rg: rg,
         veiculo: vehicle,
         animaldeestimação: pet,
-        unidade: female,
+        unidade: prop,
       };
 
       // Exibir no console
